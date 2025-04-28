@@ -1,4 +1,4 @@
-# [SupportSight](https://vite-project-nine-opal.vercel.app/login)
+# [SupportSight](https://vite-project-c0dexg-c0dexgs-projects.vercel.app)
 
 A comprehensive client and project management system designed specifically for freelancers and independent developers to track issues, manage client projects, and provide professional support.
 
