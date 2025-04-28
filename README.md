@@ -1,6 +1,6 @@
 # SupportSight
 
-A comprehensive client and project management system designed specifically for freelancers and independent developers to track issues, manage client projects, and provide professional support. Built with React, Vite, and Supabase.
+A comprehensive client and project management system designed specifically for freelancers and independent developers to track issues, manage client projects, and provide professional support.
 
 ## Why SupportSight?
 
@@ -75,90 +75,51 @@ As a freelancer or independent developer, managing multiple clients and their pr
 - shadcn/ui Components
 - OpenAI API (GPT-3.5 for error analysis)
 
-## Getting Started
+## Security Features
 
-1. Clone the repository
+- Row Level Security (RLS) enabled for all tables
+- Data isolation between users
+- Secure authentication via Supabase
+- Environment variable protection
+- Shared issue control
+
+## Setup Instructions
+
+1. Clone the repository:
+```bash
+git clone https://github.com/C0deXG/SupportSight.git
+cd SupportSight
+```
+
 2. Install dependencies:
-   ```bash
-   cd SupportSight
-   npm install
-   ```
+```bash
+npm install
+```
+
 3. Set up environment variables:
-   Create a `.env` file in the frontend directory with:
-   ```
-   NEXT_PUBLIC_SUPABASE_URL=your_supabase_url
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=your_supabase_anon_key
-   (optional)->OPENAI_API_KEY=your_openai_api_key `Working on it now`
-   ```
-4. Run the development server:
-   ```bash
-   npm run dev
-   ```
+   - Copy `.env.example` to `.env`
+   - Fill in your Supabase credentials
 
-## Setting Up For Your Clients
+4. Run development server:
+```bash
+npm run dev
+```
 
-1. **Create Your Account**
-   - Sign up and set up your profile
-   - Configure your workspace settings
+## Security Setup
 
-2. **Add Clients**
-   - Create client profiles
-   - Set up project spaces
-   - Generate client portal links
-
-3. **Customize Settings**
-   - Set up notification preferences
-   - Configure issue templates
-   - Customize client portal appearance
-
-4. **Start Managing**
-   - Begin tracking issues
-   - Monitor projects
-   - Generate reports
-
-## Database Schema
-
-### Clients
-- id (Primary Key)
-- name
-- email
-- phone
-- company
-- notes
-- created_at
-- updated_at
-
-### Projects
-- id (Primary Key)
-- client_id (Foreign Key)
-- name
-- description
-- status (active, completed, on_hold)
-- start_date
-- end_date
-- created_at
-- updated_at
-
-### Issues
-- id (Primary Key)
-- project_id (Foreign Key)
-- title
-- description
-- type (bug, feature, task)
-- severity (low, medium, high, critical)
-- status (open, in_progress, resolved, closed)
-- assigned_to
-- due_date
-- error_trace (Text, for storing parsed error messages)
-- error_pattern (String, identified error pattern)
-- ai_analysis (JSON, storing OpenAI analysis results)
-- created_at
-- updated_at
+1. RLS policies are automatically configured
+2. Each user's data is isolated
+3. Shared issues are controlled via policies
+4. Regular security audits recommended
 
 ## Contributing
 
-We welcome contributions! Please read our contributing guidelines before submitting pull requests.
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details. 
+This project is licensed under the MIT License - see the LICENSE file for details.
